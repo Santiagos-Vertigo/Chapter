@@ -1,6 +1,7 @@
 package uno.dos;
 
 
+import org.w3c.dom.Node;
 
 public class MyLinkedList24_5<E> implements MyList24_1<E> {
     private Node<E> head, tail;
