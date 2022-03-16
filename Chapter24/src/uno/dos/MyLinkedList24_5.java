@@ -132,7 +132,7 @@ public class MyLinkedList24_5<E> implements MyList24_1<E> {
     @Override
     /** Remove the element at the specified position in this
      * list. Return the element that was removed from the list */
-    E remove(int index) {
+    public E remove(int index) {
         // Implemented earlier in Section 24.4.3.6
         if (index < 0 || index >= size) return null; // Out of range
         else if (index == 0) return removeFirst(); // Remove first
@@ -220,7 +220,7 @@ public class MyLinkedList24_5<E> implements MyList24_1<E> {
     }
 
     private class LinkedListIterator implements java.util.Iterator<E> {
-        private Node<E> current = head; // Current index
+        private MyLinkedList24_5.Node<E> current = head; // Current index
 
 
         @Override
@@ -253,5 +253,10 @@ public class MyLinkedList24_5<E> implements MyList24_1<E> {
     @Override /** Return the number of elements in this list */
     public int size(){
         return size;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
     }
 }

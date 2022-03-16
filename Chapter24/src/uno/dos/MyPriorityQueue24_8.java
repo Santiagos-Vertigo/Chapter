@@ -1,13 +1,13 @@
 package uno.dos;
 
 public class MyPriorityQueue24_8<E> {
-    private Heap<E> heap;
+    private Heap<E> heap = new Heap();
 
-    public void MyPriorityQueue24_8<E> {
-        heap.add(new Heap<E>);
+    public  MyPriorityQueue24_8()  {
+        heap.add((E) new Heap());
     }
 
-    public MyPriorityQueue24_8(java.util.Comparator<E> e) {
+    public MyPriorityQueue24_8(Comparable<E> c) {
         heap = new Heap<E>(c);
     }
     public void enqueue(E newObject){

@@ -1,26 +1,32 @@
 package uno.dos;
 
+import java.util.AbstractCollection;
 import java.util.Collection;
+import java.util.List;
 
 public interface MyList24_1<E> extends Collection<E>{
     /** Add a new element at the specified index in this list */
-    public void add(int index, E e);
+     void add(int index, E e);
 
     /** Return the element from this list at the specified index */
-    public E get(int index);
+     E get(int index);
 
     /** Return the index of the first matching element in this list.
      * Return -1 if no match. */
-    public int indexOf(Object e);
+     int indexOf(Object e);
 
     /** Return the index of the last matching element of thios list.
      * Return -1 if no match */
     int lastIndexOf(E e);
 
-    /** Remove the element at the specified position in this list
+    /**
+     * Remove the element at the specified position in this list
      * Shift any subsequent elements to the left.
-     * Return the element that was removed from the list. */
-    E remove(int index);
+     * Return the element that was removed from the list.
+     */
+    default E remove(int index) {
+        return null;
+    }
 
     /** Replace the element at the specified position in this list
      * with the specified element and return the new set. */
@@ -43,36 +49,35 @@ public interface MyList24_1<E> extends Collection<E>{
             return false;
     }
 
-//    int indexOf(java.lang.Object e);
+    @Override
+     default boolean containsAll(Collection<?> c){
+        //Left as an Exercise
+        return true;
+    }
+    @Override
+     default boolean addAll(Collection<? extends E> c) {
+        //Left as an Exercise
+        return true;
+    }
+    @Override
+     default boolean removeAll(Collection<?> c) {
+        //Left as an Exercise
+        return true;
+    }
+    @Override
+     default boolean retainAll(Collection<?> c) {
+        //Left as an Exercise
+        return true;
+    }
+    @Override
+     default Object[] toArray() {
+        //Left as an Exercise
+        return null;
+    }
+    @Override
+     default <T> T[] toArray(T[] array) {
+        //Left as an Exercise
+        return null;
+    }
 
-    @Override
-    public default boolean containsAll(Collection<?> c){
-        //Left as an Exercise
-        return true;
-    }
-    @Override
-    public default boolean addAll(Collection<? extends E> c) {
-        //Left as an Exercise
-        return true;
-    }
-    @Override
-    public default boolean removeAll(Collection<?> c) {
-        //Left as an Exercise
-        return true;
-    }
-    @Override
-    public default boolean retainAll(Collection<?> c) {
-        //Left as an Exercise
-        return true;
-    }
-    @Override
-    public default Object[] toArray() {
-        //Left as an Exercise
-        return null;
-    }
-    @Override
-    public default <T> T[] toArray(T[] array) {
-        //Left as an Exercise
-        return null;
-    }
 }

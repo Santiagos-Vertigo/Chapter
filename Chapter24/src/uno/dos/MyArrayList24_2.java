@@ -130,7 +130,7 @@ public class MyArrayList24_2<E> implements MyList24_1<E> {
     public String toString() {
         StringBuilder result = new StringBuilder("[");
 
-        for (int i = 0; i < size; size++) {
+        for (int i = 0; i < size; i++) {
             result.append(data[i]);
             if (i < size - 1) result.append(", ");
         }
